@@ -6,6 +6,7 @@ WORKDIR /app
 
 # Copy Maven files
 COPY mvnw .
+RUN chmod +x mvnw
 
 COPY pom.xml .
 
@@ -23,4 +24,5 @@ EXPOSE 8080
 
 # Run the Spring Boot app
 CMD ["java", "-jar", "target/*.jar"]
+
 
