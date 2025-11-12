@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy Maven files
 COPY mvnw .
-COPY .mvn .mvn
+
 COPY pom.xml .
 
 # Download dependencies
@@ -23,3 +23,4 @@ EXPOSE 8080
 
 # Run the Spring Boot app
 CMD ["java", "-jar", "target/*.jar"]
+
